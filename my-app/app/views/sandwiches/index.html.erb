@@ -1,0 +1,8 @@
+<h1>Welcome to Subwhey, the Sandwich Shoppe For Gains</h1>
+
+<h3>Behold our 💪sandwiches</h3>
+<ul>
+<% @sandwiches.each do |sandwich|%>
+    <li><%= link_to sandwich.name, sandwich %></li>
+<% end %>
+</ul>

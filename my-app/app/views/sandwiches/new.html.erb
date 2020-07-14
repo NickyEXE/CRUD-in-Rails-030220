@@ -1,0 +1,27 @@
+<h1>Sandwich Forger</h1>
+
+<!--
+<form action="/sandwiches" method="post">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name" value=""><br>
+  <label for="spicyness">Spicyness:</label><br>
+  <input type="number" id="spicyness" name="spicyness" value=""><br>
+  <label for="name">Vegetarian:</label><br>
+  <input type="checkbox" id="vegetarian" name="vegetarian" value=""><br>
+  <input type="submit" value="Forge">
+</form>
+-->
+
+<%# How to comment out an ERB block:%>
+<% if false %>
+    <%= form_tag "/sandwiches" %>
+    <label for="name">Name:</label><br>
+    <%= text_field_tag "sandwich[name]" %><br>
+    <label for="spicyness">Spicyness:</label><br>
+    <%= number_field_tag "sandwich[spicyness]" %><br>
+    <label for="checkbox">Vegetarian:</label><br>
+    <%= check_box_tag "sandwich[vegetarian]" %><br>
+    <%= submit_tag "Forge Sandwich" %>
+<% end %>
+
+<%= render 'form' %>

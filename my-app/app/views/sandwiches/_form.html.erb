@@ -1,0 +1,9 @@
+<%= form_for @sandwich do |f|%>
+    <label for="name">Name:</label><br>
+    <%= f.text_field :name %><br>
+    <label for="Spicyness">Spicyness:</label><br>
+    <%= f.number_field :spicyness %><br>
+    <label for="Vegetarian">Vegetarian:</label><br>
+    <%= check_box("sandwich", "vegetarian") %><br>
+    <%= f.submit %>
+<% end %>

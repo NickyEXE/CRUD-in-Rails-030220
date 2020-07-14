@@ -1,0 +1,9 @@
+<h1>Behold the <%= @sandwich.name %></h1>
+
+<p>This sandwich is <%= @sandwich.vegetarian ? "fit for those who consume not the flesh" : "filled with slaughtered prey" %>.</p>
+
+<p><%= "🌶" * @sandwich.spicyness %></p>
+
+<%= link_to 'Edit Sandwich', edit_sandwich_path(@sandwich) %>
+<br><br>
+<%= button_to 'Delete', @sandwich, method: :delete %>
